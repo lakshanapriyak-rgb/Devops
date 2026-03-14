@@ -1,0 +1,8 @@
+name: Lakshana-Pipeline
+on: push
+jobs:
+  my-test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Message
+        run: echo "CI Pipeline Running"
