@@ -4,5 +4,13 @@ jobs:
   my-test-job:
     runs-on: ubuntu-latest
     steps:
-      - name: Message
-        run: echo "CI Pipeline Running"
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: '3.13'
+
+      - name: Run message
+        run: echo "Python installed successfully"
